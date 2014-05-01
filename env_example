@@ -1,0 +1,10 @@
+## Make a new file at the root of the project named .env
+## These are the values that current are used in the app
+## All values are loaded in the app or can be pushed up with
+## Heroku config plugin
+MAILER_USER=<email_username>
+MAILER_PASS=<email_password>
+MAILER_TO=<email_to_send_to>
+MAILER_CC=<email_to_cc>
+MAILER_SERVER=<smtp_server>
+MAILER_AUTH=<auth_type probably plan>
