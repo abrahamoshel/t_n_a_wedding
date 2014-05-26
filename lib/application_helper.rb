@@ -10,5 +10,13 @@ module ApplicationHelper
 
     haml(template.to_sym, options)
   end
-  
+
+  def admin_haml(template, options={})
+    haml(template, options.merge(:layout => :'admin/layout'))
+  end
+
+  def page_haml(template, options={})
+    haml(template, options.merge(:layout => :'page/layout'))
+  end
+
 end
