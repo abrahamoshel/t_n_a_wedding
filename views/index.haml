@@ -4,3 +4,44 @@
       %span.opening-elip …
       but out of his side to be equal with him
       %span.closing-elip …
+
+  .getting_hitched.row
+    =partial('shared/landing')
+
+  .the_couple.row
+    #abe_slider.carousel.slide{"data-ride" => "carousel"}
+      / Indicators
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+        %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+        %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+      / Wrapper for slides
+      .carousel-inner
+        .item.active
+          %img{alt: "...", src: "/images/landing_bg.png"}/
+        .item
+          %img{alt: "...", src: "/images/landing_bg.png"}/
+
+      / Controls
+      %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic"}
+        %span.glyphicon.glyphicon-chevron-left
+      %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic"}
+        %span.glyphicon.glyphicon-chevron-right
+    #tiff_slider.carousel.slide{"data-ride" => "carousel"}
+      / Indicators
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+        %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+        %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+      / Wrapper for slides
+      .carousel-inner
+        .item.active
+          %img{alt: "...", src: "/images/landing_bg.png"}/
+        .item
+          %img{alt: "...", src: "/images/landing_bg.png"}/
+
+      / Controls
+      %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic"}
+        %span.glyphicon.glyphicon-chevron-left
+      %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic"}
+        %span.glyphicon.glyphicon-chevron-right

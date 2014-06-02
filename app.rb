@@ -9,7 +9,8 @@ class App < Sinatra::Base
     set :public_folder, File.join(root, "assets")
     set :css_folder, File.join(public_folder, "css")
     set :js_folder, File.join(public_folder, "js")
-    set :img_folder, File.join(public_folder, "img")
+    set :img_folder, File.join(public_folder, "images")
+    set :fonts_folder, File.join(public_folder, "images")
     set :haml, {format: :html5}
     set :logging, true
     helpers ApplicationHelper
