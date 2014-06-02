@@ -5,6 +5,7 @@ ruby "2.1.0"
 gem "thin"
 gem "sinatra", :require => "sinatra/base"
 gem "sinatra-contrib", :require => ["sinatra/content_for", "sinatra/respond_with", "sinatra/reloader"]
+gem "sprockets-helpers", :require => 'sinatra/sprockets-helpers'
 gem "haml"
 gem "coffee-script"
 gem "sass", "~> 3.3.8"

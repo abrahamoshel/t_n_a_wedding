@@ -1,5 +1,7 @@
 class App < Sinatra::Base
 
+  register Sinatra::Sprockets::Helpers
+
   configure do
     #setup
     set :controllers, Dir[File.join(root,'controllers/*.rb')]
