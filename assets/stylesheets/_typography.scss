@@ -1,0 +1,157 @@
+h1, h2, h3, h4, h5 {
+  font-family: $headline-ff;
+}
+
+.headline {
+  h2, h3, h4, h5 {
+   font-family: $alt-headline-ff;
+   color: $copy-color;
+  }
+}
+
+p, a {
+  font-family: $copy-ff;
+}
+
+p {
+  color: $copy-color; 
+}
+
+.landing h1 {
+  font-family: $headline-ff;
+  font-size: em(60);
+  text-transform: uppercase;
+  text-align: center;
+  opacity: .4;
+  
+  @include media($mid) {
+    font-size: em(32);
+  }
+
+  @include media($mobile) {
+    font-size: em(26);
+  }
+}
+
+.about.landing h1 {
+  text-align: left;
+  padding-left: em(18);
+}
+
+.the_story {
+  .headline {
+    h2, h3 {
+      text-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    }
+    h2 {
+     font-size: em(40);
+     color: #8DB8F2;
+    }
+
+    h3 {
+      padding-left: 32px;
+      font-size: em(30);
+      color: #6888B3;
+    }
+  }
+
+  p {
+    color: #F26938;
+    margin-top: 0;
+    font-size: 1.5em;
+    line-height: 140%;
+    padding-left: 32px;
+    padding-right: 18px;
+  }
+}
+
+svg {
+  #abe_svg {
+   fill: #8DB8F2;
+   stroke: #6888B3;
+   stroke-width: em(.5);
+  }
+  
+  #tiff_svg {
+    @extend #abe_svg;
+  }
+  
+  #date_svg {
+    @extend #abe_svg;
+  }
+ 
+  #amp_are {
+    fill: #F26938;
+    stroke: #C4552E;
+    stroke-width: .03em;
+    
+    .are {
+      @extend #abe_svg;
+    }
+    
+    line {
+      stroke: #F26938;
+    }
+  }
+
+}
+
+#Layer_1 {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  height: 500px;
+  margin-top: -40px;
+
+  @include media($mobile) {
+    margin-top: -130px;
+  }
+}
+
+#Layer_1 > g > text:nth-child(3) {
+  letter-spacing: 1px;
+}
+
+#Layer_1 > g > text:nth-child(1){
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(2) {
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(4){
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(3) {
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(5) {
+  fill: #F26938;
+  stroke: C4552E;
+}
+
+#Layer_1 > g > g > g > text {
+  fill: #8DB8F2;
+}
+
+#Layer_1 > g > text:nth-child(6) {
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(1) > tspan:nth-child(2) {
+  letter-spacing: 0.09em;
+}
