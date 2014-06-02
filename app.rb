@@ -1,17 +1,17 @@
 class App < Sinatra::Base
 
-	configure do
-		#setup
-		set :controllers, Dir[File.join(root,'controllers/*.rb')]
+  configure do
+    #setup
+    set :controllers, Dir[File.join(root,'controllers/*.rb')]
     set :models, Dir[File.join(root,'models/*.rb')]
-		set :public_folder, File.join(root, "assets")
-		set :css_folder, File.join(public_folder, "css")
-		set :js_folder, File.join(public_folder, "js")
-		set :img_folder, File.join(public_folder, "img")
-		set :haml, {format: :html5}
+    set :public_folder, File.join(root, "assets")
+    set :css_folder, File.join(public_folder, "css")
+    set :js_folder, File.join(public_folder, "js")
+    set :img_folder, File.join(public_folder, "img")
+    set :haml, {format: :html5}
     set :logging, true
     helpers ApplicationHelper
-	end
+  end
 
   configure :development do
     register Sinatra::Reloader
@@ -25,8 +25,8 @@ class App < Sinatra::Base
     # include file_name.constantize
   end
 
-	get '/' do
-		haml :index, :layout => false
-	end
+  get '/' do
+    haml :index, :layout => false
+  end
 
 end

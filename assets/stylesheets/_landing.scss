@@ -1,0 +1,46 @@
+body {
+  background-color: #3c3c3c;
+}
+
+.home.landing {
+  background: url('/images/landing_bg.png') no-repeat;
+  background-size: 100%;
+  background-position: top center;
+  min-height: 600px;
+  max-height: 780px;
+  
+  @include media($lg) {
+    min-height: 495px; 
+    background-position: 0 -60px;
+  }
+
+  @include media($mid) {
+    min-height: 460px;
+  }
+  @include media($small) {
+    min-height: 415px;
+  }
+  @include media($tablet) {
+    min-height: 400px;
+    background-position: 0px 0px;;
+  }
+
+  @include media($mobile-vert) {
+    min-height: 300px;
+  }
+
+  
+  header {
+    padding-top: em(32);
+    padding-bottom: 45%;
+
+    @include media($lg) {
+      padding-bottom: 28%
+    }
+  }
+  h1 {
+    margin-top: 0px; //reset 
+  }
+}
+
+
