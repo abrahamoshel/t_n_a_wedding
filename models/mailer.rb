@@ -10,7 +10,7 @@ module Mailer
 
   def self.deliver(from=nil, body=nil)
     Mail.new do
-      from     "tiffanie.marie@gmail.com"
+      from     ENV["MAILER_FROM"]
       cc       ENV["MAILER_CC"]
       to       ENV["MAILER_TO"]
       subject  "New RSVP From #{from}"
