@@ -26,7 +26,8 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    haml :index, :layout => false
+    haml :index
   end
+
 
 end
