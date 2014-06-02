@@ -4,7 +4,7 @@ describe 'Admin' do
 
     it "should load admin root" do
 
-      visit '/admin'
-      page.should have_content('Admin World!')
+      visit '/rsvp'
+      expect(page).to have_content('RSVP World!')
   end
 end

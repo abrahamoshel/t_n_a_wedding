@@ -4,6 +4,6 @@ describe 'App' do
 
 	it "should load app root" do
     visit '/'
-		page.should have_content('Tiffanie Marie Wright and Abraham Everett Mangelsdorf Wedding Site.')
+		expect(page).to have_content('but out of his side to be equal with him')
 	end
 end
