@@ -8,13 +8,12 @@ module Mailer
                              :enable_starttls_auto => true  }
   end
 
-  def self.deliver(from=nil, body=nil)
-    Mail.new do
+  def draft_email
+    mail = Mail.new do
       from     ENV["MAILER_FROM"]
       cc       ENV["MAILER_CC"]
       to       ENV["MAILER_TO"]
-      subject  "New RSVP From #{from}"
-      body     body
-    end.deliver
+    end
+    mail
   end
 end
