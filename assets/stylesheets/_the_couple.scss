@@ -1,0 +1,25 @@
+.selfies {
+  @include clearfix;
+}
+
+#abe_slider.carousel {
+  width: 50%;
+  float: left;
+
+
+
+  .item {
+  width: 100%;
+  
+    img{
+    width: 100%;
+    height: auto;}
+  }
+
+  @include media($tablet) {
+    width: 100%;}
+}
+
+#tiff_slider.carousel {
+  @extend #abe_slider.carousel
+}

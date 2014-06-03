@@ -3,11 +3,8 @@
   = partial('shared/head')
 
   %body
-    .navbar.navbar-fixed-top
-      .container
-        = partial('shared/topbar')
-    .container
-      .content
-        -# flash_messages
-        = yield
+    -# flash_messages
+    = yield
     = partial('shared/footer')
+
+  %script{src: '/assets/app.js', type:'text/javascript'}
