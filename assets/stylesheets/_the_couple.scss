@@ -1,3 +1,42 @@
+.the_story {
+  padding-bottom: em(24);
+
+  .headline {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: em(24);}
+
+  .drop {
+    position: relative;
+    
+    .tiff{
+      font-size: 2.3em;
+      position: relative;
+      top: 21px;
+      left: 14px;}
+
+    .amp {
+      font-size: 7em;
+      position: absolute;
+      top: 52px;
+      right: -4px;
+      color: #3f3f3f;}
+
+    .abe {
+      font-size: 2.3em;
+      position: relative;
+      top: 24px;
+      left: 12px;}
+  }
+}
+
+.double-border {
+  padding: 6px;
+  margin-top: em(8);
+  margin-bottom: em(8);
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;}
+
 .selfies {
   @include clearfix;
 }
@@ -6,11 +45,9 @@
   width: 50%;
   float: left;
 
-
-
   .item {
   width: 100%;
-  
+
     img{
     width: 100%;
     height: auto;}
@@ -21,5 +58,4 @@
 }
 
 #tiff_slider.carousel {
-  @extend #abe_slider.carousel
-}
+  @extend #abe_slider.carousel;}
