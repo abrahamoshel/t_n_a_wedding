@@ -39,8 +39,6 @@ p {
 }
 
 .the_story {
-  background: #1f1f1f;
-
   .headline {
     h2, h3 {
       text-shadow: 6px 6px 0px rgba(0,0,0,0.3);
@@ -57,15 +55,16 @@ p {
     padding-left: 18px;
     width: 260px;
     float: left;
-    margin-right: 5px;
+    margin-right: 25px;
+    margin-bottom: 11px;
     
     h2 {line-height: 150%;}
   }
 
   p {
-    color: #F26938;
+    color: #033E8C;
     margin-top: 0;
-    font-size: em(24);
+    font-size: em(32);
     padding-left: 18px;
     padding-right: 18px;
     padding-bottom: 18px;
