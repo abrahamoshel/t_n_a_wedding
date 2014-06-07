@@ -1,1 +1,53 @@
-%p RSVP World!
+%p
+  Invited Guests
+
+%p
+  Please respond below by 31 July 2014. [this sentence needs to be most
+  noticeable thing on the page]
+
+%p
+  If you have trouble, you may also call our RSVP voicemail
+  (785) 380-9332.
+
+%p
+  The Keith House lends itself to the small, intimate wedding we have
+  always wanted. Space is limited. With love, we highly encourage our
+  guests to attend without non-infant children. If this is not possible,
+  please add a Note so we can make accommodations.
+
+%form{action: "/rsvp", method: "post"}
+  %label First Name:
+  %input{name: "first_name", type: "text", placeholder: "John"}
+
+  %label Last Name:
+  %input{name: "last_name", type: "text", placeholder: "Smith"}
+
+  %label Email Address:
+  %input{name: "email_address", type: "email", placeholder: "john@gmail.com"}
+
+  %label With regret, I will not attend:
+  %input{name: "attending", type: "checkbox", value: "not attending"}
+
+  %label I will attend:
+  %input{name: "attending", type: "checkbox", value: "attending"}
+
+  %label I will bring a guest:
+  %input{name: "attending_guest", type: "checkbox", value: "with guest"}
+
+  %label Name of guests:
+  %input{name: "guests", type: "text", placeholder: "Jane Doe, John Smith Jr."}
+
+  %label Total attendees:
+  %input{name: "attendance", type: "number", placeholder: "1"}
+
+  %label Dietary Restrictions:
+  %input{name: "allergies", type: "text", placeholder: "gluten, corn, dairy"}
+  %p
+    Don't worry, we can feed you! Nearly everything on the menu is
+    already free of gluten, corn and cow milk products. There are
+    vegetarian options as well.
+
+  %label Note for Abraham and Tiffanie:
+  %input{name: "note", type: "textarea", placeholder: "TLDR"}
+
+  %input{type: "submit", value: "RSVP"}
