@@ -53,10 +53,8 @@ p {
 
   .alt-headline{
     padding-left: 18px;
-    width: 260px;
-    float: left;
-    margin-right: 25px;
-    margin-bottom: 11px;
+    margin-right: 35px;
+    margin-bottom: 13px;
     
     h2 {line-height: 150%;}
   }
@@ -64,7 +62,7 @@ p {
   p {
     color: #033E8C;
     margin-top: 0;
-    font-size: em(32);
+    font-size: em(42);
     padding-left: 18px;
     padding-right: 18px;
     padding-bottom: 18px;
@@ -111,6 +109,7 @@ svg {
   position: relative;
   height: 500px;
   margin-top: -40px;
+  padding-left: em(20);
 
   @include media($mobile) {
     margin-top: -130px;

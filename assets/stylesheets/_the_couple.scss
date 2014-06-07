@@ -9,29 +9,38 @@
     padding-bottom: 18px;
     font-size: em(38);}
 
+  .alt-headline {
+    width: 200px;
+    height: 127px;
+    float: left;
+  }
+
   .drop {
     position: relative;
     
     .tiff{
-      font-size: 2.3em;
+      font-size: 3.8em;
       position: relative;
       top: 21px;
-      left: 14px;}
+      left: 0px;
+      display: block;
+    }
 
     .amp {
-      font-size: 7em;
+      font-size: 8em;
       position: absolute;
       top: 52px;
-      right: -4px;
-      /*color: #3f3f3f;*/
+      right: -32px;
       color: #AA2C14;
+      /* color: #3f3f3f; */
+      display: block;
     }
 
     .abe {
-      font-size: 2.3em;
+      font-size: 3.8em;
       position: relative;
-      top: 24px;
-      left: 12px;}
+      top: 53px;
+      left: 0px;}
   }
 }
 
