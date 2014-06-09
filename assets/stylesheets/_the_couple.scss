@@ -2,17 +2,14 @@
   padding-bottom: em(24);
   background: #8DB8F2;
 
-  .headline {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    font-size: em(38);}
-
   .alt-headline {
     width: 200px;
     height: 127px;
     float: left;
+  }
+
+  .headline {
+    @include headline(em(120), #8db8f2);
   }
 
   .drop {

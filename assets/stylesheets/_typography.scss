@@ -1,20 +1,49 @@
-h1, h2, h3, h4, h5 {
-  font-family: $headline-ff;
-}
+h1, h2, h3, h4, h5 { font-family: $headline-ff; }
 
 .alt-headline {
   h2, h3, h4, h5 {
    font-family: $alt-headline-ff;
    color: $copy-color;
-  }
+ }
 }
 
-p, a {
+p, a { font-family: $copy-ff; }
+p { color: $copy-color; }
+
+address {
   font-family: $copy-ff;
 }
 
-p {
-  color: $copy-color; 
+@mixin headline (
+  $font-size: em(40),
+  $font-color: #e5e5e5
+) {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  h2, h3 {
+    font-size: $font-size;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    text-align: center;
+    padding-left: em(18);
+    padding-right: em(18);
+    color: #8DB8F2;
+    color: $font-color;
+  }
+}
+
+.headline {
+ @include headline(em(120, 16));
+}
+
+.alt-headline{
+  padding-left: 18px;
+  margin-right: 35px;
+  margin-bottom: 13px;
+
+  h2 {line-height: 150%;}
 }
 
 .landing h1 {
@@ -23,7 +52,7 @@ p {
   text-transform: uppercase;
   text-align: center;
   opacity: .4;
-  
+
   @include media($mid) {
     font-size: em(32);
   }
@@ -39,26 +68,6 @@ p {
 }
 
 .the_story {
-  .headline {
-    h2, h3 {
-      text-shadow: 6px 6px 0px rgba(0,0,0,0.3);
-      text-align: center;}
-
-    h2 {
-      font-size: em(40);
-      padding-left: em(18);
-      padding-right: em(18);
-      color: #8DB8F2;}
-  }
-
-  .alt-headline{
-    padding-left: 18px;
-    margin-right: 35px;
-    margin-bottom: 13px;
-    
-    h2 {line-height: 150%;}
-  }
-
   p {
     color: #033E8C;
     margin-top: 0;

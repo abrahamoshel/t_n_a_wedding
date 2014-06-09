@@ -1,65 +1,61 @@
-.bullets {
-  $icon-bullet-size: 3.5em;
+.the_details {
+  background: #F26938;
 
-  overflow: auto;
-  margin-bottom: $base-line-height;
-
-  
-// change ".three-col-bullet" class to this for two bullet layout
-  .two-col-bullet {
-    @include media($lg) {
-      @include span-columns(6);
-      @include omega(2n);  
-    } 
+  .headline {
+    @include headline(em(120),$font-color: #F26938);
   }
-  
-  .three-col-bullet {
-    @include media($lg) {
-      @include span-columns(4);
-      @include omega(3n);
+
+  .bullets {
+    .bullet h2 { font-size: 3.2em; }
+    .bullet p { font-size: 2em; margin-top: 18px; text-align: center;}
+    .bullet address {
+      font-size: 2em;
+      color: #fbfbfb;
+      padding-left: 15px;
+      margin-top: 18px;
+
+      @include media($tablet) {
+        padding-left: 70px;
+      }
     }
-  }
 
-  
-// change ".three-col-bullet" class to this for four bullet layout
-  .four-col-bullet {
-    @include media($lg) {
-      @include span-columns(3);
-      @include omega(4n);
+    .bullet.date p {
+      text-align: center;
     }
-  }
 
-  .bullet-icon {
-    float: left;
-    background: $base-accent-color;
-    padding: $icon-bullet-size /4;
-    border-radius: 50%;
-    width: $icon-bullet-size;
-    height: $icon-bullet-size;
-  }
+    figure {
+      position: relative;
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
 
-  .bullet-icon-1 {
-    background: $base-accent-color;
-  }
+      span.date, span.month{
+        position: absolute;
+        font-family: $copy-ff;
+      }
 
-  .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50);
-  }
+      span.month {
+        left: 0px;
+        top: 20px;
+        width: 150px;
+        font-size: 2em;
+        text-align: center;
+        padding-top: 3px;
+        letter-spacing: 2px;
+        border-bottom: 1px solid #7e7e7e;
+        text-transform: uppercase;
+      }
 
-  .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140);
-  }
+      span.date {
+        font-size: 7em;
+        width: 151px;
+        text-align: center;
+        left: 0;
+        top: 31px;
+      }
 
-  .bullet-content {
-    margin-left: $icon-bullet-size *1.4;
-    margin-bottom: 2em;
-  }
-
-  h2 {
-    font-size: $icon-bullet-size /2.5;
-    padding-top: $icon-bullet-size /7;
-    margin-bottom: $icon-bullet-size /6;
-    border-bottom: 1px solid transparentize($base-font-color, .8);
-    display: inline-block;
+      i {font-size: 8em;}
+    }
   }
 }

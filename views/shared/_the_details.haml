@@ -1,21 +1,32 @@
-the_details.row
+.the_details.row
   .container
+    %header.headline
+      %h2 The Details
+      .double-border
+
     .bullets
-      .bullet.three-col-bullet
-        .bullet-icon.bullet-icon-1
-          %img{alt: "", src: "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_2.png"}/
+      .bullet.three-col-bullet.date
         .bullet-content
-          %h2 This Bullet Title
-          %p Lorem dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.
+          %h2 When
+          %figure
+            %img{ src:"/images/calendar_icon.png", alt:"September 27th, 2014" }
+            %span.month sept
+            %span.date 27
+          %p September 27th, 2014
       .bullet.three-col-bullet
-        .bullet-icon.bullet-icon-2
-          %img{alt: "", src: "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_3.png"}/
         .bullet-content
-          %h2 Another Bullet Title
-          %p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.
+          %h2 Where 
+          %figure
+            %i.fa.fa-map-marker.fa-5x
+          %address
+            The Kieth House
+            %br
+            1900 S. Prairie Ave
+            %br
+            Chicago, IL 60616
       .bullet.three-col-bullet
-        .bullet-icon.bullet-icon-3
-          %img{alt: "", src: "https://raw.github.com/Magnus-G/Random/master/placeholder_logo_4.png"}/
         .bullet-content
-          %h2 Last Bullet Title
-          %p Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.
+          %h2 Eat
+          %figure
+            %i.fa.fa-cutlery.fa-5x
+          %p A delicious dinner catered by Sinha Elegant Cuisine
