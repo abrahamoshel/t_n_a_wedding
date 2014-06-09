@@ -5,6 +5,12 @@
     @include headline(em(120),$font-color: #F26938);
   }
 
+  .alt-headline {
+    font-size: em(24);
+    text-align: center;
+    margin-bottom: $base-line-height / 2;
+  }
+
   .bullets {
     .bullet h2 { font-size: 3.2em; }
     .bullet p { font-size: 2em; margin-top: 18px; text-align: center;}
