@@ -1,0 +1,30 @@
+footer {
+  background: url('/images/footer_bg.jpg') no-repeat fixed;
+  background-size: cover;
+  min-height: 550px;
+  position: relative;
+  padding-top: em(18);
+  padding-bottom: em(18);
+
+  .container {
+    position: relative;
+
+    header {
+      @include media($mid){
+        margin-top: 18%;
+      }
+
+      h2 {
+      padding-left: em(18);}
+    }
+    p {
+      position: absolute;
+      bottom: 10px;}
+  }
+}
+.color-wrap{
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  background-color: rgba(120, 137, 145, .55);
+}
+
