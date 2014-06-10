@@ -48,13 +48,13 @@ address {
 
 .landing h1 {
   font-family: $headline-ff;
-  font-size: em(60);
+  font-size: em(95);
   text-transform: uppercase;
   text-align: center;
   opacity: .4;
 
   @include media($mid) {
-    font-size: em(32);
+    font-size: em(62);
   }
 
   @include media($mobile) {
