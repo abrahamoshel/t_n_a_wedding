@@ -7,6 +7,12 @@ def app
   Server
 end
 
+Mail.defaults do
+  delivery_method :test
+end
+
+Mail::TestMailer.deliveries.clear
+
 RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include Capybara::DSL
