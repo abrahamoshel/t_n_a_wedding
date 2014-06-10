@@ -17,8 +17,8 @@
     .bullet address {
       font-size: 2em;
       color: #fbfbfb;
-      padding-left: 15px;
       margin-top: 18px;
+      text-align: center;
 
       @include media($tablet) {
         padding-left: 70px;

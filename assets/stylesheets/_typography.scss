@@ -46,20 +46,40 @@ address {
   h2 {line-height: 150%;}
 }
 
-.landing h1 {
+@mixin special-headline(
+  $opacity:         .4,
+  $fontsize: em(95)
+) {
   font-family: $headline-ff;
-  font-size: em(95);
+  font-size: $fontsize; 
   text-transform: uppercase;
   text-align: center;
-  opacity: .4;
+  opacity: $opacity;
 
   @include media($mid) {
-    font-size: em(62);
+    font-size: $fontsize / 2;
   }
 
   @include media($mobile) {
-    font-size: em(26);
+    font-size: $fontsize / 3;
   }
+}
+.landing h1 {
+  @include special-headline;
+}
+
+footer .special-headline {
+  @include special-headline( .7, em(55) );
+  h2 {
+    color: #f1f1f1;
+    width: 85%;
+    text-align: left;
+    
+    small {
+      color: inherit;
+    }
+  }
+
 }
 
 .about.landing h1 {
