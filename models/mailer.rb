@@ -9,8 +9,7 @@ module Mailer
          email:  ENV["MAILER_TO"],
          name:  ENV["MAILER_TO_NAME"]
        }
-      ],
-      from_email: ENV["MAILER_FROM"]
+      ]
     }
     email
   end
