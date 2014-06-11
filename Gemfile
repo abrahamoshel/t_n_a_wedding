@@ -12,7 +12,7 @@ gem "sass", "~> 3.3.8"
 gem "compass", "~> 1.0.0.alpha.19"
 gem "bootstrap-sass", "~> 3.1.1"
 gem "sprockets"
-gem "mail"
+gem "mandrill-api", :require => "mandrill"
 gem "dotenv"
 
 group :test do
