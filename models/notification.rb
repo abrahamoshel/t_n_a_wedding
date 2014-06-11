@@ -1,5 +1,7 @@
+require_relative './mailer.rb'
+
 class Notification
-  include ::Mailer
+  include Mailer
 
   attr_accessor :params, :email, :first_name, :last_name, :email_address,
                 :attending, :attending_guest, :guests,
