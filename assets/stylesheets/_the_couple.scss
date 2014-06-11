@@ -18,9 +18,9 @@
 
   .drop {
     position: relative;
-    
+
     .tiff{
-      font-size: 3.8em;
+      font-size: $drop-name-font-size;
       position: relative;
       top: 21px;
       left: 0px;
@@ -28,7 +28,7 @@
     }
 
     .amp {
-      font-size: 8em;
+      font-size: $drop-ampersand-font-size;
       position: absolute;
       top: 52px;
       right: -32px;
@@ -38,30 +38,25 @@
     }
 
     .abe {
-      font-size: 3.8em;
+      font-size: $drop-name-font-size;
       position: relative;
       top: 53px;
-      left: 0px;}
+      left: 0px;
+    }
   }
 }
 
-.double-border {
-  padding: 6px;
-  margin-top: em(8);
-  margin-bottom: em(8);
-  border-top: 1px solid #f1f1f1;
-  border-bottom: 1px solid #f1f1f1;}
+
 
 .selfies {
-  @include clearfix;
-}
+  @include clearfix;}
 
 #abe_slider.carousel {
   width: 50%;
   float: left;
 
   .item {
-  width: 100%;
+    width: 100%;
 
     img{
     width: 100%;
@@ -69,8 +64,10 @@
   }
 
   @include media($tablet) {
-    width: 100%;}
+    width: 100%;
+  }
 }
 
 #tiff_slider.carousel {
-  @extend #abe_slider.carousel;}
+  @extend #abe_slider.carousel;
+}

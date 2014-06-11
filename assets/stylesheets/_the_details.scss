@@ -1,8 +1,8 @@
 .the_details {
-  background: #F26938;
+  background: $details-bg-color;
 
   .headline {
-    @include headline(em(120),$font-color: #F26938);
+    @include headline(em(120),$font-color: $details-bg-color);
   }
 
   .alt-headline {
@@ -13,7 +13,13 @@
 
   .bullets {
     .bullet h2 { font-size: 3.2em; }
-    .bullet p { font-size: 2em; margin-top: 18px; text-align: center;}
+    
+    .bullet p {
+      font-size: 2em;
+      margin-top: 18px;
+      text-align: center;
+    }
+    
     .bullet address {
       font-size: 2em;
       color: #fbfbfb;

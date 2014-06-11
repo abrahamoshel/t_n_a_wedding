@@ -1,0 +1,93 @@
+svg {
+  padding-left: em(20);
+
+  #abe_svg {
+   fill: #8DB8F2;
+   stroke: #6888B3;
+   stroke-width: em(.5);
+  }
+  
+  #tiff_svg {
+    @extend #abe_svg;
+  }
+  
+  #date_svg {
+    @extend #abe_svg;
+  }
+ 
+  #amp_are {
+    fill: #F26938;
+    stroke: #C4552E;
+    stroke-width: .03em;
+    
+    .are {
+      @extend #abe_svg;
+    }
+    
+    line {
+      stroke: #F26938;
+    }
+  }
+
+}
+
+#Layer_1 {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  height: 500px;
+  margin-top: -40px;
+  padding-left: em(20);
+
+  @include media($mobile) {
+    margin-top: -130px;
+  }
+}
+
+#Layer_1 > g > text:nth-child(3) {
+  letter-spacing: 1px;
+}
+
+#Layer_1 > g > text:nth-child(1){
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(2) {
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(4){
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(3) {
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(5) {
+  fill: #F26938;
+  stroke: C4552E;
+}
+
+#Layer_1 > g > g > g > text {
+  fill: #8DB8F2;
+}
+
+#Layer_1 > g > text:nth-child(6) {
+  fill: #8DB8F2;
+  stroke: #6888B3;
+  stroke-width: .01em;
+}
+
+#Layer_1 > g > text:nth-child(1) > tspan:nth-child(2) {
+  letter-spacing: 0.09em;
+}

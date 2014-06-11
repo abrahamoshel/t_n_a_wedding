@@ -1,9 +1,9 @@
 body {
-  background-color: #3c3c3c;
+  background-color: $background-color;
 }
 
 .home.landing {
-  background: url('/images/landing_bg.png') no-repeat;
+  background: $landing-bg-url;
   background-size: 100%;
   background-position: top center;
   min-height: 600px;
