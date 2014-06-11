@@ -34,6 +34,7 @@ GEM
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
     eventmachine (1.0.3)
+    excon (0.37.0)
     execjs (2.2.0)
     ffi (1.9.3)
     haml (4.0.5)
@@ -44,8 +45,9 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
-    mail (2.6.1)
-      mime-types (>= 1.16, < 3)
+    mandrill-api (1.0.51)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
     method_source (0.8.2)
     mime-types (2.3)
     mini_portile (0.6.0)
@@ -116,7 +118,7 @@ DEPENDENCIES
   compass (~> 1.0.0.alpha.19)
   dotenv
   haml
-  mail
+  mandrill-api
   pry
   rack-test
   rspec

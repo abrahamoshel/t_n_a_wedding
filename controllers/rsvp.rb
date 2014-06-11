@@ -4,7 +4,9 @@ class Rsvp < App
    	rsvp_haml :'rsvp/index'
   end
   post '/' do
-    Notification.new(params).email.deliver if params
+    message = Notification.new(params).message
+    mailer = Mandrill::API.new
+    mailer.messages.send(message) if params
     redirect to("/info")
   end
   get '/info' do
