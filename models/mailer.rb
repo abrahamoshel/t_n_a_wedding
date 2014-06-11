@@ -4,7 +4,7 @@ module Mailer
                              :port                 => 587,
                              :user_name            => ENV["MAILER_USER"],
                              :password             => ENV["MAILER_PASS"],
-                             :authentication       => ENV["MAILER_AUTH"],
+                             :authentication => :plain,
                              :enable_starttls_auto => true  }
   end
 
