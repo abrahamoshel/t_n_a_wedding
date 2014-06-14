@@ -33,8 +33,6 @@ address {
   h2 {line-height: 150%;}
 }
 
-
-
 .landing h1 {
   @include special-headline;
 }
@@ -44,15 +42,29 @@ address {
   padding-left: em(18);
 }
 
+.the_details .alt-headline {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $base-line-height * 1.5;
+}
+
+
 footer .special-headline {
-  @include special-headline( .7, em(55) );
+  padding-top: 18px;
+  @include special-headline( .7, em(45) );
   h2 {
     color: #f1f1f1;
-    width: 85%;
+    width: 90%;
     text-align: left;
+    padding-left: em(18);
 
     small {
       color: inherit;
+      width: 100%;
+      display: block;
+      text-align: right;
+      margin-top: 8px;
     }
   }
 }
@@ -62,10 +74,9 @@ footer .special-headline {
     color: #033E8C;
     margin-top: 0;
     font-size: em(42);
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 45px;
+    padding-right: 45px;
     padding-bottom: 18px;
     line-height: 140%;}
 }
-
 

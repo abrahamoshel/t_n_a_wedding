@@ -40,6 +40,6 @@
   }
 
   @include media($mobile) {
-    font-size: $fontsize / 3;
+    font-size: $fontsize / 2.5;
   }
 }

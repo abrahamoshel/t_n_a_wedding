@@ -7,9 +7,10 @@
   background: #8DB8F2;
 
   .alt-headline {
-    width: 200px;
+    width: 250px;
     height: 127px;
     float: left;
+    margin-right: 45px;
   }
 
   .headline {
@@ -23,7 +24,7 @@
       font-size: $drop-name-font-size;
       position: relative;
       top: 21px;
-      left: 0px;
+      left: 50px;
       display: block;
     }
 
@@ -41,7 +42,7 @@
       font-size: $drop-name-font-size;
       position: relative;
       top: 53px;
-      left: 0px;
+      left: 50px;
     }
   }
 }
