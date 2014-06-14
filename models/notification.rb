@@ -1,22 +1,17 @@
+require_relative './mailer.rb'
+
 class Notification
   include Mailer
 
   attr_accessor :params, :email, :first_name, :last_name, :email_address,
                 :attending, :attending_guest, :guests,
-                :attendance, :allergies, :note
+                :attendance, :allergies, :note, :message
 
   def initialize(args)
     @params = args
-    email = compose_email
-    email
+    @message = compose_message(@params, compose_body)
   end
 
-  def compose_email
-    @email = draft_email
-    @email.subject = "New RSVP From #{@params[:first_name]} #{@params[:last_name]}"
-    @email.body = compose_body
-    @email
-  end
   def compose_body
     body = ""
     @params.each do |k, v|
