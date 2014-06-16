@@ -1,7 +1,7 @@
 class Rsvp < App
 
   get '/'do
-   	rsvp_haml :'rsvp/index'
+    rsvp_haml :'rsvp/index'
   end
   post '/' do
     message = Notification.new(params).message

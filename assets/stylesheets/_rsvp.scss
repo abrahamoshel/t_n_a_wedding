@@ -1,6 +1,9 @@
 .rsvp {
   background: url("/images/rsvp_bg.jpg") no-repeat;
   background-attachment: fixed;
+  background-size: 100%;
+  background-position: 0px -80px;
+
   .copy {
     @include span-columns(8);
     @include shift (2);
@@ -8,7 +11,47 @@
   }
 
   .controls {
-    @include span-columns(10);
-    @include shift (1);
+    @include span-columns(8);
+    @include shift (2);
   }
+}
+
+
+
+fieldset {
+  background: none;
+  border: none;
+}
+
+label {
+  font-family: $alt-headline-ff;
+  font-size: em(24, 16);
+  color: rgba(250, 250, 250, .8);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea{
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  background: rgba(100,100,100, .7);
+  border: none;
+  min-height: 35px;
+  padding-left: $base-line-height / 1.2;
+  font-size: em(28);
+  letter-spacing: em(2);
+  font-family: $headline-ff;
+  text-transform: uppercase;
+  color: rgba(220,220,220,.8);
+
+  &:focus {
+    background: rgba(250,250,250,.2);
+    color: #f1f1f1;
+  }
+}
+
+input[type="email"]{
+  text-transform: none;
 }
