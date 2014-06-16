@@ -1,0 +1,14 @@
+.rsvp {
+  background: url("/images/rsvp_bg.jpg") no-repeat;
+  background-attachment: fixed;
+  .copy {
+    @include span-columns(8);
+    @include shift (2);
+    @include omega;
+  }
+
+  .controls {
+    @include span-columns(10);
+    @include shift (1);
+  }
+}
