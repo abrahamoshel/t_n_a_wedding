@@ -64,9 +64,9 @@
     height: auto;}
   }
 
-  @include media($tablet) {
-    width: 100%;
-  }
+  /*@include media($tablet) {*/
+    /*width: 100%;*/
+  /*}*/
 }
 
 #tiff_slider.carousel {
