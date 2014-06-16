@@ -1,4 +1,6 @@
-h1, h2, h3, h4, h5 { font-family: $headline-ff; }
+h1, h2, h3, h4, h5 {
+  font-family: $headline-ff;
+}
 
 .alt-headline {
   h2, h3, h4, h5 {
@@ -7,31 +9,16 @@ h1, h2, h3, h4, h5 { font-family: $headline-ff; }
  }
 }
 
-p, a { font-family: $copy-ff; }
-p { color: $copy-color; }
-
-address {
+p, a {
   font-family: $copy-ff;
 }
 
-@mixin headline (
-  $font-size: em(40),
-  $font-color: #e5e5e5
-) {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+p {
+  color: $copy-color;
+}
 
-  h2, h3 {
-    font-size: $font-size;
-    text-shadow: 6px 6px 0px rgba(0,0,0,0.3);
-    text-align: center;
-    padding-left: em(18);
-    padding-right: em(18);
-    color: #8DB8F2;
-    color: $font-color;
-  }
+address {
+  font-family: $copy-ff;
 }
 
 .headline {
@@ -46,40 +33,8 @@ address {
   h2 {line-height: 150%;}
 }
 
-@mixin special-headline(
-  $opacity:         .4,
-  $fontsize: em(95)
-) {
-  font-family: $headline-ff;
-  font-size: $fontsize; 
-  text-transform: uppercase;
-  text-align: center;
-  opacity: $opacity;
-
-  @include media($mid) {
-    font-size: $fontsize / 2;
-  }
-
-  @include media($mobile) {
-    font-size: $fontsize / 3;
-  }
-}
 .landing h1 {
   @include special-headline;
-}
-
-footer .special-headline {
-  @include special-headline( .7, em(55) );
-  h2 {
-    color: #f1f1f1;
-    width: 85%;
-    text-align: left;
-    
-    small {
-      color: inherit;
-    }
-  }
-
 }
 
 .about.landing h1 {
@@ -87,107 +42,41 @@ footer .special-headline {
   padding-left: em(18);
 }
 
+.the_details .alt-headline {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $base-line-height * 1.5;
+}
+
+
+footer .special-headline {
+  padding-top: 18px;
+  @include special-headline( .7, em(45) );
+  h2 {
+    color: #f1f1f1;
+    width: 90%;
+    text-align: left;
+    padding-left: em(18);
+
+    small {
+      color: inherit;
+      width: 100%;
+      display: block;
+      text-align: right;
+      margin-top: 8px;
+    }
+  }
+}
+
 .the_story {
   p {
     color: #033E8C;
     margin-top: 0;
     font-size: em(42);
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 45px;
+    padding-right: 45px;
     padding-bottom: 18px;
     line-height: 140%;}
 }
 
-svg {
-  padding-left: em(20);
-
-  #abe_svg {
-   fill: #8DB8F2;
-   stroke: #6888B3;
-   stroke-width: em(.5);
-  }
-  
-  #tiff_svg {
-    @extend #abe_svg;
-  }
-  
-  #date_svg {
-    @extend #abe_svg;
-  }
- 
-  #amp_are {
-    fill: #F26938;
-    stroke: #C4552E;
-    stroke-width: .03em;
-    
-    .are {
-      @extend #abe_svg;
-    }
-    
-    line {
-      stroke: #F26938;
-    }
-  }
-
-}
-
-#Layer_1 {
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  height: 500px;
-  margin-top: -40px;
-  padding-left: em(20);
-
-  @include media($mobile) {
-    margin-top: -130px;
-  }
-}
-
-#Layer_1 > g > text:nth-child(3) {
-  letter-spacing: 1px;
-}
-
-#Layer_1 > g > text:nth-child(1){
-  fill: #8DB8F2;
-  stroke: #6888B3;
-  stroke-width: .01em;
-}
-
-#Layer_1 > g > text:nth-child(2) {
-  fill: #8DB8F2;
-  stroke: #6888B3;
-  stroke-width: .01em;
-}
-
-#Layer_1 > g > text:nth-child(4){
-  fill: #8DB8F2;
-  stroke: #6888B3;
-  stroke-width: .01em;
-}
-
-#Layer_1 > g > text:nth-child(3) {
-  fill: #8DB8F2;
-  stroke: #6888B3;
-  stroke-width: .01em;
-}
-
-#Layer_1 > g > text:nth-child(5) {
-  fill: #F26938;
-  stroke: C4552E;
-}
-
-#Layer_1 > g > g > g > text {
-  fill: #8DB8F2;
-}
-
-#Layer_1 > g > text:nth-child(6) {
-  fill: #8DB8F2;
-  stroke: #6888B3;
-  stroke-width: .01em;
-}
-
-#Layer_1 > g > text:nth-child(1) > tspan:nth-child(2) {
-  letter-spacing: 0.09em;
-}

@@ -9,11 +9,13 @@
 
 @import "./refills/bullets";
 
+@import "./mixins";
 @import "./variables";
 @import "./layout";
 @import "./typography";
 
 @import "./landing";
+@import "./landing-svg";
 @import "./the_couple";
 @import "./the_details";
 @import "./footer";

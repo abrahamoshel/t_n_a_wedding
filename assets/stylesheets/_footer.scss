@@ -13,13 +13,12 @@ footer {
       @include media($mid){
         margin-top: 18%;
       }
-
-      h2 {
-      padding-left: em(18);}
     }
+
     p {
       position: absolute;
-      bottom: 10px;}
+      bottom: 10px;
+    }
   }
 }
 .color-wrap{

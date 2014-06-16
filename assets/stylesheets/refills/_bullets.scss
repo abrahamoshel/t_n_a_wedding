@@ -51,7 +51,6 @@
   }
 
   .bullet-content {
-    margin-left: $icon-bullet-size *1.4;
     margin-bottom: 2em;
   }
 
@@ -63,7 +62,7 @@
     margin-bottom: $icon-bullet-size /6;
     border-bottom: 1px solid transparentize($base-font-color, .8);
     display: block;
-    width: 90%;
+    width: 70%;
     text-align: center;
   }
 }
