@@ -1,7 +1,7 @@
 .rsvp.row
   .container
     %header.headline
-      %h2 RSVP for Invited Guests 
+      %h2 RSVP for Invited Guests
       .double-border
 
     .alt-headline
@@ -19,7 +19,7 @@
         please add a Note so we can make accommodations.
 
     %footer.controls
-      %form{action: "/rsvp", method: "post"}
+      %form.rsvp_form{action: "/rsvp", method: "post"}
         %fieldset.invitee-info
           %label{for: "first_name"} First Name:
           %input#first_name{name: "first_name", type: "text", placeholder: "John"}
@@ -27,8 +27,12 @@
           %label{for: "last_name"} Last Name:
           %input#last_name{name: "last_name", type: "text", placeholder: "Smith"}
 
+        %fieldset.contact_info
           %label{for: "email_address"} Email Address:
           %input#email_address{name: "email_address", type: "email", placeholder: "john@gmail.com"}
+
+          %label{for: "phone"} Phone Number:
+          %input#phone{name: "phone", type: "tel", placeholder: "785.380.9332"}
 
         %fieldset.invitee-attendance
           %label{for: "not_attending"} With regret, I will not attend:
