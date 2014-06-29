@@ -1,13 +1,25 @@
-%div#event_map
-%p
-  Abraham and Tiffanie will exchange vows and celebrate Saturday, 27
-  September 2014 at the beautiful
-  %a{href: "http://www.keithhousechicago.com/"} Keith House
-  , 1900 S. Prairie Ave, Chicago, IL.
-%p
-  4:00 pm - The fun begins outdoors with tea and live piano music
-  provided by the Mother of the Bride. Guests will be asked to take their
-  seats, and the bride and groom will become husband and wife. Then we
-  will all head inside for a delicious dinner. provided by
-  %a{href: "http://sinhaelegantcuisine.com/"} Sinha Elegant Cuisine
-  and dancing.
+.info.row
+  .color-wrap
+  .container
+    %header.headline
+      %h2 Abraham & Tiffanie will exchange vows
+      .double-border
+      .alt-headline
+        %h3 We can't wait to celebrate Saturday September 27th, 2014
+
+    %section.info_details.grid-items-lines
+      %a.grid-item{href: "http://www.keithhousechicago.com/", target: "_blank"}
+        %h1 The Beautiful Keith House 
+        %p 1900 S. Prairie Ave, Chicago, IL
+      %a.grid-item.grid-item-big{href: "http://sinhaelegantcuisine.com/", target: "_blank"}
+        %h1 4:00 pm - The Fun begins outdoors with tea and live piano music.
+        %p
+          Talents provided by the Mother of the Bride. Guests will then be asked to
+          take their seats, the bride and groom will become husband and wife, and
+          then we will all head inside for a delicious dinner provided by
+          Sinha Elegant Cuisine with music and dancing.
+      -#.right-cover
+      -#.bottom-cover
+
+.info_map.row
+  %div#event_map

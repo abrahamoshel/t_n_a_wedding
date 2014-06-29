@@ -15,6 +15,11 @@ p, a {
 
 p {
   color: $copy-color;
+  font-size: em(25, 16);
+}
+
+a {
+  font-size: em(25, 24);
 }
 
 address {
@@ -47,6 +52,16 @@ address {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: $base-line-height * 1.5;
+}
+
+.info {
+  .headline h2 {
+    font-size: em(91, 16);
+  }
+  .alt-headline h3 {
+    font-size: em(52, 16);
+    margin-top: 8px;
+  }
 }
 
 
