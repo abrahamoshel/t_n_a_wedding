@@ -21,34 +21,43 @@
     %footer.controls
       %form.rsvp_form{action: "/rsvp", method: "post"}
         %fieldset.invitee-info
-          %label{for: "first_name"} First Name:
-          %input#first_name{name: "first_name", type: "text", placeholder: "John"}
+          .form_row
+            %label{for: "first_name"} First Name:
+            %input#first_name{name: "first_name", type: "text", placeholder: "John"}
 
-          %label{for: "last_name"} Last Name:
-          %input#last_name{name: "last_name", type: "text", placeholder: "Smith"}
+          .form_row
+            %label{for: "last_name"} Last Name:
+            %input#last_name{name: "last_name", type: "text", placeholder: "Smith"}
 
         %fieldset.contact_info
-          %label{for: "email_address"} Email Address:
-          %input#email_address{name: "email_address", type: "email", placeholder: "john@gmail.com"}
+          .form_row
+            %label{for: "email_address"} Email Address:
+            %input#email_address{name: "email_address", type: "email", placeholder: "john@gmail.com"}
 
-          %label{for: "phone"} Phone Number:
-          %input#phone{name: "phone", type: "tel", placeholder: "785.380.9332"}
+          .form_row
+            %label{for: "phone"} Phone Number:
+            %input#phone{name: "phone", type: "tel", placeholder: "785.380.9332"}
 
         %fieldset.invitee-attendance
-          %label{for: "not_attending"} With regret, I will not attend:
-          %input#not_attending{name: "not_attending", type: "checkbox", value: "not attending"}
+          .form_row
+            %label{for: "not_attending"} With regret, I will not attend:
+            %input#not_attending{name: "not_attending", type: "checkbox", value: "not attending"}
 
-          %label{for: "attending"} I will attend:
-          %input#attending{name: "attending", type: "checkbox", value: "attending"}
+          .form_row
+            %label{for: "attending"} I will attend:
+            %input#attending{name: "attending", type: "checkbox", value: "attending"}
 
-          %label{for: "attending_guest"} I will bring a guest:
-          %input#attending_guest{name: "attending_guest", type: "checkbox", value: "with guest"}
+          .form_row
+            %label{for: "attending_guest"} I will bring a guest:
+            %input#attending_guest{name: "attending_guest", type: "checkbox", value: "with guest"}
 
-          %fieldset.invitee-guests
+        %fieldset.invitee-guests
+          .form_row
             %label{for: "guests"} Name of guests:
             %input#guests{name: "guests", type: "text", placeholder: "Jane Doe, John Smith Jr."}
 
-          %fieldset.party-attendees
+        %fieldset.party-attendees
+          .form_row
             %label{for: "attendance"} Total attendees:
             %input#attendance{name: "attendance", type: "number", placeholder: "1"}
 

@@ -1,8 +1,8 @@
 .rsvp {
   background: url("/images/rsvp_bg.jpg") no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
-  background-position: 0px -80px;
+  background-size: cover;
+  background-position: center bottom;
 
   .copy {
     @include span-columns(8);
@@ -15,8 +15,6 @@
     @include shift (2);
   }
 }
-
-
 
 fieldset {
   background: none;
@@ -65,4 +63,21 @@ input{
   &.error{
     border: 1px solid $details-bg-color;
   }
+}
+
+@mixin two-form-split () {
+  .form_row {
+    @include span-columns(6);
+    @include media($tablet) {
+      @include span-columns(8);
+    }
+  }
+}
+
+.invitee-info {
+  @include two-form-split();
+}
+
+.contact_info {
+  @include two-form-split();
 }
