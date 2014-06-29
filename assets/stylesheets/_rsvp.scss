@@ -27,11 +27,17 @@ label {
   font-family: $alt-headline-ff;
   font-size: em(24, 16);
   color: rgba(250, 250, 250, .8);
+
+  &.error {
+    color: $details-bg-color;
+    padding: 0px 0px;
+  }
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
+input[type="tel"],
 textarea{
   border-radius: 0;
   background-color: transparent;
@@ -54,4 +60,9 @@ textarea{
 
 input[type="email"]{
   text-transform: none;
+}
+input{
+  &.error{
+    border: 1px solid $details-bg-color;
+  }
 }
