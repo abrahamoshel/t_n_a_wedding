@@ -29,5 +29,10 @@
 
   .groomsmen {
     @include two-split;
+    @include omega;
+  }
+
+  .double-border {
+    @include span-columns(12);
   }
 }
