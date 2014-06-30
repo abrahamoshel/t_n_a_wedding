@@ -1,0 +1,20 @@
+@mixin two-split () {
+    @include span-columns(6);
+
+    @include media($tablet) {
+      @include span-columns(8);
+    }
+}
+
+.the_wedding_party {
+  .content {
+    padding-left: 18px; 
+  }
+  .bridesmaids {
+    @include two-split;
+  }
+
+  .groomsmen {
+    @include two-split;
+  }
+}
