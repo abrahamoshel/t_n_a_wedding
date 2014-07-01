@@ -1,0 +1,38 @@
+@mixin two-split () {
+    @include span-columns(6);
+
+    @include media($tablet) {
+      @include span-columns(8);
+    }
+}
+
+.the_wedding_party {
+  background: $wedding-party-bg-color;
+  .headline {
+    @include headline(em(120),$font-color: $wedding-party-bg-color);
+  }
+
+  .content {
+    padding-left: 18px; 
+  }
+  
+  .alt-headline {
+    h3 {
+      padding-bottom: 8px;
+      border-bottom: 2px dotted #f1f1f1;
+    }
+  }
+
+  .bridesmaids {
+    @include two-split;
+  }
+
+  .groomsmen {
+    @include two-split;
+    @include omega;
+  }
+
+  .double-border {
+    @include span-columns(12);
+  }
+}

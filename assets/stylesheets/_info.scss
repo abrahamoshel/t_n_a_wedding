@@ -1,3 +1,20 @@
+.info {
+  background: url('/images/info_bg.jpg') no-repeat fixed;
+  background-position: center top;
+  background-size: cover;
+
+  .container {
+    min-height: 500px;
+    padding-top: 3%;
+    position: relative;
+  }
+}
+
+
 #event_map{
-  height: 27em;
+  height: 50em;
+  width: 100%;
+  display: block;
+  margin-top: -15px;
+  margin-bottom: -20px;
 }

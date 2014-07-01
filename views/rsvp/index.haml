@@ -1,53 +1,76 @@
-%p
-  Invited Guests
+.rsvp.row
+  .container
+    %header.headline
+      %h2 RSVP for Invited Guests
+      .double-border
 
-%p
-  Please respond below by 31 July 2014. [this sentence needs to be most
-  noticeable thing on the page]
+    .alt-headline
+      %h2 Please respond below by 31 July 2014
 
-%p
-  If you have trouble, you may also call our RSVP voicemail
-  (785) 380-9332.
+    %section.copy
+      %p
+        If you have trouble, you may also call our RSVP voicemail
+        (785) 380-9332.
 
-%p
-  The Keith House lends itself to the small, intimate wedding we have
-  always wanted. Space is limited. With love, we highly encourage our
-  guests to attend without non-infant children. If this is not possible,
-  please add a Note so we can make accommodations.
+      %p
+        The Keith House lends itself to the small, intimate wedding we have
+        always wanted. Space is limited. With love, we highly encourage our
+        guests to attend without non-infant children. If this is not possible,
+        please add a Note so we can make accommodations.
 
-%form{action: "/rsvp", method: "post"}
-  %label First Name:
-  %input{name: "first_name", type: "text", placeholder: "John"}
+    %footer.controls
+      %form.rsvp_form{action: "/rsvp", method: "post"}
+        %fieldset.invitee-info
+          .form_row
+            %label{for: "first_name"} First Name:
+            %input#first_name{name: "first_name", type: "text", placeholder: "John"}
 
-  %label Last Name:
-  %input{name: "last_name", type: "text", placeholder: "Smith"}
+          .form_row
+            %label{for: "last_name"} Last Name:
+            %input#last_name{name: "last_name", type: "text", placeholder: "Smith"}
 
-  %label Email Address:
-  %input{name: "email_address", type: "email", placeholder: "john@gmail.com"}
+        %fieldset
+          .form_row
+            %label{for: "email_address"} Email Address:
+            %input#email_address.contact_info{name: "email_address", type: "email", placeholder: "john@gmail.com"}
 
-  %label With regret, I will not attend:
-  %input{name: "attending", type: "checkbox", value: "not attending"}
+          .form_row
+            %label{for: "phone"} Phone Number:
+            %input#phone.contact_info{name: "phone", type: "tel", placeholder: "785.380.9332"}
 
-  %label I will attend:
-  %input{name: "attending", type: "checkbox", value: "attending"}
+        %fieldset
+          .form_row
+            %label{for: "not_attending"} With regret, I will not attend:
+            %input#not_attending.invitee-attendance{name: "not_attending", type: "checkbox", value: "not attending"}
 
-  %label I will bring a guest:
-  %input{name: "attending_guest", type: "checkbox", value: "with guest"}
+          .form_row
+            %label{for: "attending"} I will attend:
+            %input#attending.invitee-attendance{name: "attending", type: "checkbox", value: "attending"}
 
-  %label Name of guests:
-  %input{name: "guests", type: "text", placeholder: "Jane Doe, John Smith Jr."}
+          .form_row
+            %label{for: "attending_guest"} I will bring a guest:
+            %input#attending_guest{name: "attending_guest", type: "checkbox", value: "with guest"}
 
-  %label Total attendees:
-  %input{name: "attendance", type: "number", placeholder: "1"}
+        %fieldset.invitee-guests
+          .form_row
+            %label{for: "guests"} Name of guests:
+            %input#guests{name: "guests", type: "text", placeholder: "Jane Doe, John Smith Jr."}
 
-  %label Dietary Restrictions:
-  %input{name: "allergies", type: "text", placeholder: "gluten, corn, dairy"}
-  %p
-    Don't worry, we can feed you! Nearly everything on the menu is
-    already free of gluten, corn and cow milk products. There are
-    vegetarian options as well.
+        %fieldset.party-attendees
+          .form_row
+            %label{for: "attendance"} Total attendees:
+            %input#attendance{name: "attendance", type: "number", placeholder: "1"}
 
-  %label Note for Abraham and Tiffanie:
-  %input{name: "note", type: "textarea", placeholder: "TLDR"}
+        %fieldset.dietary
+          %p
+            Don't worry, we can feed you! Nearly everything on the menu is
+            already free of gluten, corn and cow milk products. There are
+            vegetarian options as well.
+          %label{for: "allergies"} Dietary Restrictions:
+          %input#allergies{name: "allergies", type: "text", placeholder: "gluten, corn, dairy"}
 
-  %input{type: "submit", value: "RSVP"}
+        %fieldset.post-script
+          %label Note for Abraham and Tiffanie:
+          %textarea{name: "note", type: "textarea", placeholder: "TLDR"}
+
+        %input{type: "submit", value: "RSVP"}

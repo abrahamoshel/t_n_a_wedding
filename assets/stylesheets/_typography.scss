@@ -9,12 +9,17 @@ h1, h2, h3, h4, h5 {
  }
 }
 
-p, a {
+p, a, li {
   font-family: $copy-ff;
 }
 
-p {
+p , li {
   color: $copy-color;
+  font-size: em(25, 16);
+}
+
+a {
+  font-size: em(25, 24);
 }
 
 address {
@@ -49,6 +54,16 @@ address {
   margin-bottom: $base-line-height * 1.5;
 }
 
+.info {
+  .headline h2 {
+    font-size: em(91, 16);
+  }
+  .alt-headline h3 {
+    font-size: em(52, 16);
+    margin-top: 8px;
+  }
+}
+
 
 footer .special-headline {
   padding-top: 18px;
@@ -78,5 +93,21 @@ footer .special-headline {
     padding-right: 45px;
     padding-bottom: 18px;
     line-height: 140%;}
+}
+
+.the_wedding_party {
+ em {
+  color:#F26938;
+  font-size: em(24);
+  position: relative;
+  top: em(2);
+ }
+}
+
+.rsvp {
+  .alt-headline {
+    text-align: center;
+    margin-bottom: $base-line-height * 2;
+  }
 }
 
