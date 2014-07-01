@@ -29,23 +29,23 @@
             %label{for: "last_name"} Last Name:
             %input#last_name{name: "last_name", type: "text", placeholder: "Smith"}
 
-        %fieldset.contact_info
+        %fieldset
           .form_row
             %label{for: "email_address"} Email Address:
-            %input#email_address{name: "email_address", type: "email", placeholder: "john@gmail.com"}
+            %input#email_address.contact_info{name: "email_address", type: "email", placeholder: "john@gmail.com"}
 
           .form_row
             %label{for: "phone"} Phone Number:
-            %input#phone{name: "phone", type: "tel", placeholder: "785.380.9332"}
+            %input#phone.contact_info{name: "phone", type: "tel", placeholder: "785.380.9332"}
 
-        %fieldset.invitee-attendance
+        %fieldset
           .form_row
             %label{for: "not_attending"} With regret, I will not attend:
-            %input#not_attending{name: "not_attending", type: "checkbox", value: "not attending"}
+            %input#not_attending.invitee-attendance{name: "not_attending", type: "checkbox", value: "not attending"}
 
           .form_row
             %label{for: "attending"} I will attend:
-            %input#attending{name: "attending", type: "checkbox", value: "attending"}
+            %input#attending.invitee-attendance{name: "attending", type: "checkbox", value: "attending"}
 
           .form_row
             %label{for: "attending_guest"} I will bring a guest:

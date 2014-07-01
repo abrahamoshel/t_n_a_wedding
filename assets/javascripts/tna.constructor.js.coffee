@@ -18,9 +18,9 @@ $(document).ready ->
         guests:
           required:'#attending_guest:checked'
         attending:
-          require_from_group: [1, ".attending"]
+          require_from_group: [1, ".invitee-attendance"]
         not_attending:
-          require_from_group: [1, ".attending"]
+          require_from_group: [1, ".invitee-attendance"]
       messages:
         first_name: "We can't print place card without your name"
         last_name: "We can't print place card without your name"
