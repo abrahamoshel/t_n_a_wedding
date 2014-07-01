@@ -2,7 +2,8 @@
 
 $(document).ready ->
   $("#event_map").each ->
-    L.mapbox.map('event_map', 'abrahamoshel.ifo03mlo')
+    map = L.mapbox.map('event_map', 'abrahamoshel.ifo03mlo')
+    map.scrollWheelZoom.disable()
 
   $(".rsvp_form").each ->
     $(this).validate
