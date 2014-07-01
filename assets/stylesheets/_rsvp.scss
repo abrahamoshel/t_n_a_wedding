@@ -3,6 +3,13 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center bottom;
+  @include clearfix;
+  position: relative;
+
+  .content {
+    @include clearfix;
+    position: relative;
+  }
 
   .copy {
     @include span-columns(8);
