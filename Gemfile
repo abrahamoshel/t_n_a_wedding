@@ -14,6 +14,7 @@ gem "bootstrap-sass", "~> 3.1.1"
 gem "sprockets"
 gem "mandrill-api", :require => "mandrill"
 gem "dotenv"
+gem 'newrelic_rpm'
 
 group :test do
   gem "rspec", :require => "rspec/core/rake_task"
