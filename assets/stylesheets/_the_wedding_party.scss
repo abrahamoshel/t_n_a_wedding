@@ -15,7 +15,7 @@
   .content {
     padding-left: 18px; 
   }
-  
+
   .alt-headline {
     h3 {
       padding-bottom: 8px;
@@ -25,14 +25,66 @@
 
   .bridesmaids {
     @include two-split;
+    margin-bottom: $base-line-height * 1.5;
   }
 
   .groomsmen {
     @include two-split;
     @include omega;
+    margin-bottom: $base-line-height * 1.5;
   }
+
+
 
   .double-border {
     @include span-columns(12);
+  }
+}
+
+.the_wedding_party {
+  .content ul {
+    display: block;
+    @include clearfix;
+    li {
+      display: block;
+      @include clearfix;
+      width: 100%;
+      padding: 13px 22px;
+      background: #3e2149;
+      border-bottom: 1px solid #5d3a6c;
+      border-left: 1px solid darken(#5d3a6c, 10);
+      border-right: 1px solid darken(#5d3a6c, 10);
+
+      &:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-top: 1px solid darken(#5d3a6c, 10);
+      }
+      
+      &:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+
+    li figure {
+      width: 75px;
+      height: 75px;
+      display: block;
+      overflow: hidden;
+      border-radius: 50%;
+      float: left;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    li h3 {
+      float: left;
+      position: relative;
+      margin:21px 0px 0px 18px;
+    }
   }
 }

@@ -96,12 +96,45 @@ footer .special-headline {
 }
 
 .the_wedding_party {
- em {
-  color:#F26938;
-  font-size: em(24);
-  position: relative;
-  top: em(2);
- }
+  .alt-headline em {
+    color:#F26938;
+    font-size: em(24);
+    position: relative;
+    top: em(2);
+  }
+
+  .alt-headline h3 {
+    font-size: em(48);
+    text-align: center;
+  }
+
+  .content p {
+    font-size: em(30);
+    font-style: italic;
+    line-height: 145%;
+  }
+
+  .content ul li {
+    color:#F26938;
+
+    em {
+      font-family: $alt-headline-ff;
+      font-size: em(10, 16);
+      position: relative;
+      top: -2px;
+      left: 5px;
+    }
+  }
+}
+.the_wedding_party {
+  .content ul {
+    display: block;
+    li {
+      display: block;
+      width: 100%;
+      padding: 4px;
+    }
+  }
 }
 
 .rsvp {
