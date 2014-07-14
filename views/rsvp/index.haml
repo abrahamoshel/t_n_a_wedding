@@ -39,20 +39,21 @@
             %label{for: "phone"} Phone Number:
             %input#phone.contact_info{name: "phone", type: "tel", placeholder: "785.380.9332"}
 
-        %fieldset
-          .form_row
-            %label{for: "not_attending"} With regret, I will not attend:
+        %fieldset.invitee_response
+          %h2 Response:
+          .form_row.checkbox_row
             %input#not_attending.invitee-attendance{name: "not_attending", type: "checkbox", value: "not attending"}
+            %label{for: "not_attending"} With regret, I will not attend
 
-          .form_row
-            %label{for: "attending"} I will attend:
+          .form_row.checkbox_row
             %input#attending.invitee-attendance{name: "attending", type: "checkbox", value: "attending"}
+            %label{for: "attending"} I will attend
 
-          .form_row
-            %label{for: "attending_guest"} I will bring a guest:
-            %input#attending_guest{name: "attending_guest", type: "checkbox", value: "with guest"}
 
         %fieldset.invitee-guests
+          .form_row.checkbox_row
+            %input#attending_guest.checkbox{name: "attending_guest", type: "checkbox", value: "with guest"}
+            %label{for: "attending_guest"} I will bring a guest
           .form_row
             %label{for: "guests"} Name of guests:
             %input#guests{name: "guests", type: "text", placeholder: "Jane Doe, John Smith Jr."}
@@ -60,7 +61,7 @@
         %fieldset.party-attendees
           .form_row
             %label{for: "attendance"} Total attendees:
-            %input#attendance{name: "attendance", type: "number", placeholder: "1"}
+            %input#attendance{name: "attendance", type: "number", placeholder: "1", min: "0", max: "5"}
 
         %fieldset.dietary
           %p
