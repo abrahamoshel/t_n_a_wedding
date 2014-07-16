@@ -1,22 +1,18 @@
 .rsvp.row
-  .container
+  .color-wrap
+  .content
     %header.headline
       %h2 RSVP for Invited Guests
       .double-border
 
     .alt-headline
-      %h2 Please respond below by 31 July 2014
+      %h2 Please respond below by 23 August 2014
 
     %section.copy
       %p
-        If you have trouble, you may also call our RSVP voicemail
-        (785) 380-9332.
-
+        If you have trouble, you may also call our RSVP voicemail (785) 380-9332.
       %p
-        The Keith House lends itself to the small, intimate wedding we have
-        always wanted. Space is limited. With love, we highly encourage our
-        guests to attend without non-infant children. If this is not possible,
-        please add a Note so we can make accommodations.
+        The Keith House lends itself to the small, intimate wedding we have always wanted. With love, we highly encourage our guests to attend without non-infant children. If this is not possible, please add a Note so we can make accommodations.
 
     %footer.controls
       %form.rsvp_form{action: "/rsvp", method: "post"}
@@ -38,28 +34,29 @@
             %label{for: "phone"} Phone Number:
             %input#phone.contact_info{name: "phone", type: "tel", placeholder: "785.380.9332"}
 
-        %fieldset
-          .form_row
-            %label{for: "not_attending"} With regret, I will not attend:
+        %fieldset.invitee_response
+          %h2 Response:
+          .form_row.checkbox_row
             %input#not_attending.invitee-attendance{name: "not_attending", type: "checkbox", value: "not attending"}
+            %label{for: "not_attending"} With regret, I will not attend
 
-          .form_row
-            %label{for: "attending"} I will attend:
+          .form_row.checkbox_row
             %input#attending.invitee-attendance{name: "attending", type: "checkbox", value: "attending"}
+            %label{for: "attending"} I will attend
 
-          .form_row
-            %label{for: "attending_guest"} I will bring a guest:
-            %input#attending_guest{name: "attending_guest", type: "checkbox", value: "with guest"}
 
         %fieldset.invitee-guests
+          .form_row.checkbox_row
+            %input#attending_guest.checkbox{name: "attending_guest", type: "checkbox", value: "with guest"}
+            %label{for: "attending_guest"} I will bring a guest
           .form_row
-            %label{for: "guests"} Name of guests:
+            %label{for: "guests"} Name of guest:
             %input#guests{name: "guests", type: "text", placeholder: "Jane Doe, John Smith Jr."}
 
         %fieldset.party-attendees
           .form_row
             %label{for: "attendance"} Total attendees:
-            %input#attendance{name: "attendance", type: "number", placeholder: "1"}
+            %input#attendance{name: "attendance", type: "number", placeholder: "1", min: "0", max: "5"}
 
         %fieldset.dietary
           %p

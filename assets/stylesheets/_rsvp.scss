@@ -3,6 +3,13 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center bottom;
+  @include clearfix;
+  position: relative;
+
+  .content {
+    @include clearfix;
+    position: relative;
+  }
 
   .copy {
     @include span-columns(8);
@@ -14,14 +21,21 @@
     @include span-columns(8);
     @include shift (2);
   }
+  .alt-headline h2{
+    font-size: 3em;
+  }
 }
 
 fieldset {
   background: none;
   border: none;
+  h2{
+    font-size: 2.25em;
+    color: rgba(250, 250, 250, .8);
+  }
 }
 
-label {
+label{
   font-family: $alt-headline-ff;
   font-size: em(24, 16);
   color: rgba(250, 250, 250, .8);
@@ -73,7 +87,17 @@ input{
     }
   }
 }
-
+.checkbox_row {
+  input{
+    font-size: 2em;
+  }
+  input, label{
+    display: inline-block;
+  }
+}
+.party-attendees, .invitee-guests{
+  display: none;
+}
 .invitee-info {
   @include two-form-split();
 }

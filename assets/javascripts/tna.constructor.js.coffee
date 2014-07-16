@@ -1,11 +1,45 @@
 "use strict"
 
+
+
 $(document).ready ->
+  first_match = (string) ->
+    return true if null_string(string)
+    list = ["valerie", "aldo", "jason", "grace", "mona", "dave", "david"]
+    list.indexOf(string.toLowerCase()) > -1
+  last_match = (string) ->
+    return true if null_string(string)
+    list = ["wright", "dizanno", "swanson", "tester", "hennein", "redman"]
+    list.indexOf(string.toLowerCase()) > -1
+
+  null_string = (value) ->
+    (!value) || (/^\s*$/.test(value)) || (0 == value.length)
+
+  check_name = (first_name, last_name) ->
+    if first_match(first_name)
+      last_match(last_name)
+    else
+      false
+
+  show_related_fields = (event, show_el) ->
+    show_time = event.target.checked
+    first_name = $("#first_name").val()
+    last_name = $("#last_name").val()
+    guest_exlcuded = check_name(first_name, last_name)
+    if show_time && !guest_exlcuded
+      $(".party-attendees, .invitee-guests").show()
+    else if !show_time
+      $(".party-attendees, .invitee-guests").hide()
+
   $("#event_map").each ->
     map = L.mapbox.map('event_map', 'abrahamoshel.ifo03mlo')
     map.scrollWheelZoom.disable()
 
+
   $(".rsvp_form").each ->
+    $("#attending").bind "change", (ev) ->
+      show_related_fields(ev, $(".party-attendees, .invitee-guests"))
+
     $(this).validate
       rules:
         first_name:
