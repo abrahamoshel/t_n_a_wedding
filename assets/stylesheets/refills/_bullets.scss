@@ -8,7 +8,7 @@
 // change ".three-col-bullet" class to this for two bullet layout
   .two-col-bullet {
     @include span-columns(6);
-    @include omega(2n);  
+    @include omega(2n);
   }
 
   .three-col-bullet {

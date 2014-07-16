@@ -12,14 +12,21 @@
   }
 
   .bullets {
+    a{
+      color: #333333;
+    }
+
     .bullet h2 { font-size: 3.2em; }
-    
+
     .bullet p {
       font-size: 2em;
       margin-top: 18px;
       text-align: center;
+      a{
+        color: #fbfbfb;
+      }
     }
-    
+
     .bullet address {
       font-size: 2em;
       color: #fbfbfb;
