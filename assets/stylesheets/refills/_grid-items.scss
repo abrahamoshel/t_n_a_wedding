@@ -5,7 +5,7 @@
 .grid-items-lines {
   $grid-items-background: rgba(250, 250, 250, .6);
   $grid-item-background: rgba(250, 250, 250, .6);
-  $grid-item-border: 1px solid transparentize($base-font-color, .8); 
+  $grid-item-border: 1px solid transparentize($base-font-color, .8);
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
   $grid-item-color: $base-font-color;
@@ -23,7 +23,6 @@
     padding: 2em;
     border-right: $grid-item-border;
     border-bottom: $grid-item-border;
-    cursor: pointer;
 
     @include grid-item-columns($grid-item-columns);
     @include media($tablet) {
